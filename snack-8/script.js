@@ -22,8 +22,13 @@ const students = [
 // Recupera la classe dello studente 'Marco Lanci'
 // Risultato: '3C'
 
-const specificStudent = students.find ((student) => {
+const specificStudent = students.filter ((student) => {
   return student.name === 'Marco Lanci';
 });
 
-console.log(specificStudent.class);
+const specificStudentClass = specificStudent.map((element) => {
+  return element.class;
+});
+
+console.log(specificStudentClass);
+
